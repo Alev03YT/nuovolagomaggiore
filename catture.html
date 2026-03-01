@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catture | Nuovo Lago Maggiore Galliate</title>
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <header class="border-b border-slate-800/60 bg-slate-950/75 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/img/logo.svg" class="h-8 w-8" alt="Logo">
+        <span class="font-semibold tracking-wide">Nuovo Lago Maggiore Galliate</span>
+      </a>
+      <nav class="flex items-center gap-5 text-sm text-slate-200">
+        <a class="text-white" href="catture.html">Catture</a>
+        <a class="hover:text-white" href="info.html">Info</a>
+        <a class="rounded-full border border-slate-700 px-3 py-1 hover:border-slate-500" href="admin/">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold">Catture</h1>
+        <p class="mt-1 text-sm text-slate-300">Feed catture con foto e dettagli.</p>
+      </div>
+
+      <div class="grid w-full gap-3 md:w-auto md:grid-cols-3">
+        <input id="q" class="w-full rounded-xl border border-slate-800 bg-slate-900/40 px-3 py-2 text-sm outline-none placeholder:text-slate-500 focus:border-slate-600" placeholder="Cerca… (specie, tecnica)" />
+        <select id="specie" class="w-full rounded-xl border border-slate-800 bg-slate-900/40 px-3 py-2 text-sm outline-none focus:border-slate-600">
+          <option value="">Tutte le specie</option>
+        </select>
+        <select id="sort" class="w-full rounded-xl border border-slate-800 bg-slate-900/40 px-3 py-2 text-sm outline-none focus:border-slate-600">
+          <option value="new">Più recenti</option>
+          <option value="old">Meno recenti</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="feed" class="mt-6 grid gap-5 md:grid-cols-2"></div>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/catches.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": "c1",
+      "titolo": "Prima cattura di prova",
+      "data": "2026-02-20",
+      "specie": "Trota",
+      "tecnica": "Bombarda",
+      "pesoKg": 1.8,
+      "note": "Esempio: recupero lento a mezz'acqua.",
+      "foto": []
+    }
+  ]
+}

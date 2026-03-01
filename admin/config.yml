@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: Alev03YT/Pesca-laghetti
+  branch: main
+  base_url: https://pesca-oauth.onrender.com
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "laghetto"
+    label: "Info Laghetto"
+    files:
+      - label: "Dati laghetto"
+        name: "laghetto"
+        file: "data/laghetto.json"
+        fields:
+          - { label: "Nome", name: "name", widget: "string" }
+          - { label: "Indirizzo", name: "address", widget: "string" }
+          - { label: "Google Maps (search URL)", name: "maps_search_url", widget: "string" }
+          - { label: "Google Maps (nav URL)", name: "maps_nav_url", widget: "string" }
+          - label: "Galleria"
+            name: "gallery"
+            widget: "list"
+            field: { label: "Immagine", name: "image", widget: "image" }
+
+  - name: "catches"
+    label: "Catture"
+    files:
+      - label: "Lista catture"
+        name: "catches"
+        file: "data/catches.json"
+        fields:
+          - label: "Catture"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Titolo", name: "titolo", widget: "string" }
+              - { label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Specie", name: "specie", widget: "string" }
+              - { label: "Tecnica", name: "tecnica", widget: "string" }
+              - { label: "Peso (kg)", name: "pesoKg", widget: "number", required: false, value_type: "float" }
+              - { label: "Note", name: "note", widget: "text", required: false }
+              - label: "Foto"
+                name: "foto"
+                widget: "list"
+                field: { label: "Immagine", name: "image", widget: "image" }
