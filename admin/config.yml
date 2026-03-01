@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Alev03YT/Pesca-laghetti
+  repo: Alev03YT/nuovolagomaggiore
   branch: main
   base_url: https://pesca-oauth.onrender.com
 
